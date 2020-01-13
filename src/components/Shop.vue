@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="bg-light py-3">
+    <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+          <div class="col-md-12 mb-0"><a href="index.html">Inicio</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Todos</strong></div>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
             <div class="row">
               <div class="col-md-12 mb-5">
-                <div class="float-md-left mb-4"><h2 class="text-black h5">Shop All</h2></div>
+                <div class="float-md-left mb-4"><h2 class="text-black h5">Todos los Productos</h2></div>
                 <div class="d-flex">
                   <!-- <div class="dropdown mr-1 ml-md-auto">
                     <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,19 +44,46 @@
             </div>
             <div class="row mb-5">
 
-              <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+              <template>
+                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" v-for="product in getProducts" :key="product.id">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="shop-single.html"><img src="/img/cloth_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <router-link :to="{name: 'shopsingle', 
+                    params: {
+                      id: `${product.id}`,
+                      marca: `${product.marca}`,
+                      descripcion: `${product.description}`,
+                      precio: `${product.precio}`,
+                      imagen: `${product.imagen}`}}" >
+                        <img :src="product.imagen" alt="Image placeholder" class="img-fluid">
+                      </router-link>
+
+                    <!-- <a href="shop-single.html"><img :src="product.imagen" alt="Image placeholder" class="img-fluid"></a> -->
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Levi's</a></h3>
-                    <p class="mb-0">Franela</p>
-                    <p class="text-primary font-weight-bold">$25000</p>
+                    <!-- <h3><a href="shop-single.html">{{product.marca}}</a></h3> -->
+                    <h3>{{product.marca}}</h3>
+                    <p class="mb-0">{{product.description}}</p>
+                    <p class="text-primary font-weight-bold">$ {{product.precio}}</p>
+                    <!-- <router-link :to="`/shopsingle/${product.id}`" class="btn btn-primary btn-sm" style="color: white">Añadir</router-link> -->
+                    <router-link :to="{name: 'shopsingle', 
+                    params: {
+                      id: `${product.id}`,
+                      marca: `${product.marca}`,
+                      descripcion: `${product.description}`,
+                      precio: `${product.precio}`,
+                      imagen: `${product.imagen}`}}" class="btn btn-primary btn-sm" style="color: white">Añadir</router-link>
+                    <!-- <a class="btn btn-primary btn-sm" style="color: white">Añadir</a> -->
+                    <!-- <button class="btn btn-primary btn-sm">Añadir</button> -->
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+
+                  
+                
+              </template>
+              
+              <!-- <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
                     <a href="shop-single.html"><img src="/img/shoe_1.jpg" alt="Image placeholder" class="img-fluid"></a>
@@ -80,7 +107,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
@@ -88,7 +114,7 @@
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="shop-single.html">Studio F</a></h3>
-                    <p class="mb-0">Camisa de tela para dama</p>
+                    <p class="mb-0">Camisa para dama</p>
                     <p class="text-primary font-weight-bold">$50000</p>
                   </div>
                 </div>
@@ -190,7 +216,7 @@
                     <p class="text-primary font-weight-bold">$50</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
 
             </div>
@@ -317,3 +343,16 @@
     </div>
     </div>
 </template>
+
+<script>
+
+import {mapGetters} from "vuex"
+
+export default {
+  
+  computed: {
+      ...mapGetters(["getProducts"])
+  }
+
+}
+</script>

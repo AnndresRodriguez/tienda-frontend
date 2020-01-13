@@ -27,12 +27,12 @@
                 <tbody>
                   <tr>
                     <td class="product-thumbnail">
-                      <img src="/img/cloth_1.jpg" alt="Image" class="img-fluid">
+                      <img src="/img/shoe_1.jpg" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Top Up T-Shirt</h2>
+                      <h2 class="h5 text-black">Zapatos Lacoste</h2>
                     </td>
-                    <td>$49.00</td>
+                    <td>$135000</td>
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
@@ -49,7 +49,7 @@
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
 
-                  <tr>
+                  <!-- <tr>
                     <td class="product-thumbnail">
                       <img src="/img/cloth_2.jpg" alt="Image" class="img-fluid">
                     </td>
@@ -71,7 +71,7 @@
                     </td>
                     <td>$49.00</td>
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
@@ -88,7 +88,7 @@
                 <button class="btn btn-outline-primary btn-sm btn-block">Continue Shopping</button>
               </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-12">
                 <label class="text-black h4" for="coupon">Coupon</label>
                 <p>Enter your coupon code if you have one.</p>
@@ -99,14 +99,14 @@
               <div class="col-md-4">
                 <button class="btn btn-primary btn-sm">Apply Coupon</button>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-md-6 pl-5">
             <div class="row justify-content-end">
               <div class="col-md-7">
                 <div class="row">
                   <div class="col-md-12 text-right border-bottom mb-5">
-                    <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                    <h3 class="text-black h4 text-uppercase">Total Carrito</h3>
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -128,7 +128,7 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Ir al pago</button>
                   </div>
                 </div>
               </div>

@@ -14,7 +14,7 @@
           <div class="col-6 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
             <div class="d-flex">
               <a href="index.html" class="">
-                <img src="/img/logo-tienda-edited.png" height="70" alt="logo-tienda">
+                <img src="https://res.cloudinary.com/sigtam/image/upload/v1572661677/logo-tienda-edited_hikbxq.png" height="70" alt="logo-tienda">
               </a>
             </div>
           </div>
@@ -33,9 +33,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="cart.html" class="site-cart">
+                  <a href="#/cart" class="site-cart">
                     <span class="icon icon-shopping_cart"></span>
-                    <span class="count">2</span>
+                    <span class="count">1</span>
                   </a>
                 </li>
                 <li class="d-inline-block d-md-none ml-md-0">
@@ -51,3 +51,8 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  
+}
+</script>

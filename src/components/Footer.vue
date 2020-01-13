@@ -1,6 +1,6 @@
 <template>
     <div>
-     <footer class="site-footer border-top">
+     <footer class=" border-top">
       <div class="container">
         <!-- <div class="row">
           <div class="col-lg-6 mb-5 mb-lg-0">
