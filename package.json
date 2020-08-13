@@ -13,6 +13,7 @@
     "jquery": "^3.5.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.0",
+    "serialize-javascript": "^4.0.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
     "vuex": "^3.0.1",
